@@ -15,6 +15,11 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        vp_1280: '1280px',
+        vp_1024: '1024px',
+        vp_640: '640px',
+      },
       spacing: {
         '9/16': '56.25%',
       },
