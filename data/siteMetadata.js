@@ -4,7 +4,7 @@ const siteMetadata = {
   // headerTitle: 'MegaNature',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'light', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
   siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
   siteLogo: '/static/images/logo2.png',
@@ -57,7 +57,7 @@ const siteMetadata = {
       // Choose the language giscus will be displayed in. options: en, es, zh-CN, zh-TW, ko, ja etc
       lang: 'en',
       // theme when dark mode
-      darkTheme: 'transparent_dark',
+      // darkTheme: 'transparent_dark',
       // If the theme option above is set to 'custom`
       // please provide a link below to your custom theme css file.
       // example: https://giscus.app/themes/custom_example.css
@@ -73,7 +73,8 @@ const siteMetadata = {
       // github-dark-orange, icy-dark, dark-blue, photon-dark, boxy-light
       theme: '',
       // theme when dark mode
-      darkTheme: '',
+      // darkTheme: '',
+      lightTheme: '',
     },
     disqusConfig: {
       // https://help.disqus.com/en/articles/1717111-what-s-a-shortname
