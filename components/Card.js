@@ -1,8 +1,9 @@
 import Image from './Image'
 import Link from './Link'
+import Trail from '@/components/Effects/Trail'
 
 const Card = ({ title, description, imgSrc, href }) => (
-  <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
+  <div className="md p-4 md:w-1/2" style={{ maxWidth: '430px' }}>
     <div
       className={`${
         imgSrc && 'h-full'
@@ -32,7 +33,7 @@ const Card = ({ title, description, imgSrc, href }) => (
         <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
           {href ? (
             <Link href={href} aria-label={`Link to ${title}`}>
-              {title}
+              <Trail open>{title}</Trail>
             </Link>
           ) : (
             title
@@ -45,7 +46,7 @@ const Card = ({ title, description, imgSrc, href }) => (
             className="text-base font-medium leading-6 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
             aria-label={`Link to ${title}`}
           >
-            Learn more &rarr;
+            查看更多 &rarr;
           </Link>
         )}
       </div>

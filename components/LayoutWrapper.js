@@ -77,7 +77,7 @@ const LayoutWrapper = ({ children }) => {
                 >
                   <Link
                     href={link.href}
-                    className="p-1 font-medium text-gray-900 group-hover:bg-emerald-400 dark:text-gray-100 sm:p-4"
+                    className="p-1 font-bold text-gray-900 group-hover:bg-emerald-400 dark:text-gray-100 sm:p-4"
                   >
                     {link.title}
                   </Link>

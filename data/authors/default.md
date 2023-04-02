@@ -1,16 +1,14 @@
 ---
-name: Tails Azimuth
-avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
+name: MegaNature
+avatar: /static/images/mn.png
+occupation: 健康呼吸 健康生活
+company: info@meganaturetech.com
+email: info@meganaturetech.com
 twitter: https://twitter.com/Twitter
 linkedin: https://www.linkedin.com
 github: https://github.com
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
-
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+MegaNature專註於一切天然自然的產品，創造出對人或動植物健康的環境
+在疫情還沒開始前，就深入研發及探討一個全新的材料技術【固態鹼】
+主動殺菌0死角、方便攜帶、時尚外觀、材料無汙染無傷害最安心

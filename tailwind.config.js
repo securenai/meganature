@@ -30,7 +30,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
+        sans: ['Microsoft JhengHei', 'system-ui', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: colors.teal,
