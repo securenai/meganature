@@ -100,7 +100,7 @@ const LayoutWrapper = ({ children }) => {
                 </div>
               ))}
             </div>
-            {/* <ThemeSwitch /> */}
+            <ThemeSwitch />
             <MobileNav />
           </div>
         </header>
