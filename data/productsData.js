@@ -1,43 +1,33 @@
 const projectsData = [
   {
     title: '空氣清淨機',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
+    description: `空氣清淨機的相關說明空氣清淨機的相關說明空氣清淨機的相關說明...`,
     imgSrc: '/static/images/img_1.jpg',
-    href: 'https://www.google.com',
+    href: '/products/air-purifier',
   },
   {
     title: '3D 列印',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
+    description: `3D 列印的相關說明3D 列印的相關說明3D 列印的相關說明...`,
     imgSrc: '/static/images/img_2.jpg',
-    href: '/blog/the-time-machine',
+    href: '/products/3d-printing',
   },
   {
     title: '植物工廠',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
+    description: `植物工廠的相關說明植物工廠的相關說明植物工廠的相關說明...`,
     imgSrc: '/static/images/img_3.jpg',
-    href: '/blog/the-time-machine',
+    href: '/products/plant-factory',
   },
   {
     title: '工程塑橡膠',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
+    description: `工程塑橡膠的相關說明工程塑橡膠的相關說明工程塑橡膠的相關說明...`,
     imgSrc: '/static/images/img_4.png',
-    href: '/blog/the-time-machine',
+    href: '/products/engineering-plastics',
   },
   {
     title: '機械製造',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
+    description: `機械製造的相關說明機械製造的相關說明機械製造的相關說明...`,
     imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    href: '/products/mechanical-manufacturing',
   },
 ]
 

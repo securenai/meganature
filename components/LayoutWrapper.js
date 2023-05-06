@@ -9,8 +9,11 @@ import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 const LayoutWrapper = ({ children }) => {
+  const router = useRouter()
+  const path = router.pathname
   const [subNavVisible, setSubNavVisible] = useState({})
 
   const handleMouseEnter = (index) => {
@@ -104,8 +107,10 @@ const LayoutWrapper = ({ children }) => {
             <MobileNav />
           </div>
         </header>
-        <main className="mb-auto">{children}</main>
-        <Footer />
+        <main className="mb-auto">
+          <div className="h-[100vh]">{children}</div>
+        </main>
+        {!path.includes('products') && <Footer />}
       </div>
     </SectionContainer>
   )

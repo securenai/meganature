@@ -2,6 +2,7 @@ import siteMetadata from '@/data/siteMetadata'
 import productsData from '@/data/productsData'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
+import Footer from '@/components/Footer'
 
 export default function Products() {
   return (
@@ -13,7 +14,7 @@ export default function Products() {
             產品選項
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Showcase your projects with a hero image (16 x 9)
+            以下是我們的產品選項，歡迎參考。
           </p>
         </div>
         <div className="container py-12">
@@ -29,6 +30,7 @@ export default function Products() {
             ))}
           </div>
         </div>
+        <Footer />
       </div>
     </>
   )

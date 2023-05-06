@@ -4,12 +4,12 @@ import { getFileBySlug } from '@/lib/mdx'
 const DEFAULT_LAYOUT = 'ContactLayout'
 
 export async function getStaticProps() {
-  const authorDetails = await getFileBySlug('authors', ['default'])
-  return { props: { authorDetails } }
+  const contactDetails = await getFileBySlug('contact', ['default'])
+  return { props: { contactDetails } }
 }
 
-export default function Contact({ authorDetails }) {
-  const { mdxSource, frontMatter } = authorDetails
+export default function Contact({ contactDetails }) {
+  const { mdxSource, frontMatter } = contactDetails
 
   return (
     <MDXLayoutRenderer
