@@ -19,7 +19,7 @@ const headerNavLinks = [
       { title: '子目錄二', href: '/support/subnav2' },
     ],
   },
-  { href: '/blog', title: '最新消息' },
+  { href: '/news', title: '最新消息' },
   { href: '/contact', title: '聯絡我們' },
 ]
 

@@ -107,10 +107,12 @@ const LayoutWrapper = ({ children }) => {
             <MobileNav />
           </div>
         </header>
-        <main className="mb-auto">
-          <div className="h-[100vh]">{children}</div>
-        </main>
-        {!path.includes('products') && <Footer />}
+        <main className="mb-auto">{children}</main>
+        <div className="sm:hidden">{/* Footer hidden on mobile viewports */}</div>
+        <div className="hidden sm:block">
+          {/* Footer shown on non-mobile viewports */}
+          {!path.includes('products') && <Footer />}
+        </div>
       </div>
     </SectionContainer>
   )

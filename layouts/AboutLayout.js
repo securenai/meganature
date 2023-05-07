@@ -2,6 +2,7 @@ import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
 import Trail from '@/components/Effects/Trail'
+import Footer from '@/components/Footer'
 
 export default function AboutLayout({ children, frontMatter }) {
   const { name, avatar, occupation, company, email, twitter, linkedin, github } = frontMatter
@@ -15,8 +16,8 @@ export default function AboutLayout({ children, frontMatter }) {
             關於恆自然
           </h1>
         </div>
-        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
-          <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
+        <div className="h-screen items-start space-y-2 xl:space-y-0">
+          <div className="prose max-w-none pt-8 pb-8 dark:prose-dark">
             <Trail open>{children}</Trail>
           </div>
         </div>
