@@ -6,8 +6,31 @@ import Trail from '@/components/Effects/Trail'
 export default function ContactLayout({ children, frontMatter }) {
   const { name, avatar, occupation, company, email, twitter, linkedin, github } = frontMatter
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
+
+    const data = {
+      name: event.target.name.value,
+      phone: event.target.phone.value,
+      email: event.target.email.value,
+      message: event.target.message.value,
+    }
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json' },
+      })
+
+      if (!response.ok) {
+        throw new Error('Error sending email')
+      }
+
+      alert('信件已成功寄出!')
+    } catch (error) {
+      alert('抱歉! 發生錯誤，信件未能送出: ' + error.message)
+    }
   }
 
   return (
@@ -43,76 +66,67 @@ export default function ContactLayout({ children, frontMatter }) {
             <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
               {children}
               <div>
-                <form
-                  className="w-full max-w-lg"
-                  onSubmit={handleSubmit}
-                  name="contact"
-                  data-netlify="true"
-                >
-                  <input type="hidden" name="form-name" value="contact" />
-
+                <form className="w-full max-w-lg" onSubmit={handleSubmit}>
                   <div className="mb-6 flex flex-wrap">
-                    <label className="mb-1 block w-full" htmlFor="name">
-                      Name:
-                    </label>
-                    <input
-                      className="w-full appearance-none rounded border border-gray-400 bg-white px-4 py-2 leading-tight text-gray-700 focus:border-blue-500 focus:bg-white focus:outline-none"
-                      id="name"
-                      type="text"
-                      name="name"
-                      placeholder="Your name"
-                      required
-                    />
+                    <div className="mb-6 w-full px-3 md:mb-0 md:w-1/2">
+                      <label className="mb-1 block w-full" htmlFor="name">
+                        姓名
+                      </label>
+                      <input
+                        className="w-full appearance-none rounded border border-gray-400 bg-white px-4 py-2 leading-tight text-gray-700 focus:border-blue-500 focus:bg-white focus:outline-none"
+                        id="name"
+                        type="text"
+                        required
+                      />
+                    </div>
+                    <div className="w-full px-3 md:w-1/2">
+                      <label className="mb-1 block w-full" htmlFor="phone">
+                        Phone
+                      </label>
+                      <input
+                        className="w-full appearance-none rounded border border-gray-400 bg-white px-4 py-2 leading-tight text-gray-700 focus:border-blue-500 focus:bg-white focus:outline-none"
+                        id="phone"
+                        type="tel"
+                        required
+                      />
+                    </div>
                   </div>
-
                   <div className="mb-6 flex flex-wrap">
-                    <label className="mb-1 block w-full" htmlFor="phone">
-                      Phone:
-                    </label>
-                    <input
-                      className="w-full appearance-none rounded border border-gray-400 bg-white px-4 py-2 leading-tight text-gray-700 focus:border-blue-500 focus:bg-white focus:outline-none"
-                      id="phone"
-                      type="tel"
-                      name="phone"
-                      placeholder="Your phone number"
-                      required
-                    />
+                    <div className="w-full px-3">
+                      <label className="mb-1 block w-full" htmlFor="email">
+                        Email
+                      </label>
+                      <input
+                        className="w-full appearance-none rounded border border-gray-400 bg-white px-4 py-2 leading-tight text-gray-700 focus:border-blue-500 focus:bg-white focus:outline-none"
+                        id="email"
+                        type="email"
+                        placeholder="email"
+                        required
+                      />
+                    </div>
                   </div>
-
                   <div className="mb-6 flex flex-wrap">
-                    <label className="mb-1 block w-full" htmlFor="email">
-                      Email:
-                    </label>
-                    <input
-                      className="w-full appearance-none rounded border border-gray-400 bg-white px-4 py-2 leading-tight text-gray-700 focus:border-blue-500 focus:bg-white focus:outline-none"
-                      id="email"
-                      type="email"
-                      name="email"
-                      placeholder="Your email address"
-                      required
-                    />
+                    <div className="w-full px-3">
+                      <label className="mb-1 block w-full" htmlFor="message">
+                        Message
+                      </label>
+                      <textarea
+                        className="w-full appearance-none rounded border border-gray-400 bg-white px-4 py-2 leading-tight text-gray-700 focus:border-blue-500 focus:bg-white focus:outline-none"
+                        id="message"
+                        rows="5"
+                        required
+                      ></textarea>
+                    </div>
                   </div>
-
-                  <div className="mb-6 flex flex-wrap">
-                    <label className="mb-1 block w-full" htmlFor="message">
-                      Message:
-                    </label>
-                    <textarea
-                      className="h-48 w-full appearance-none rounded border border-gray-400 bg-white px-4 py-2 leading-tight text-gray-700 focus:border-blue-500 focus:bg-white focus:outline-none"
-                      id="message"
-                      name="message"
-                      placeholder="Write your message here"
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <button
-                      className="focus:shadow-outline rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none"
-                      type="submit"
-                    >
-                      Send Message
-                    </button>
+                  <div className="flex flex-wrap">
+                    <div className="w-full px-3">
+                      <button
+                        className="focus:shadow-outline rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700 focus:outline-none"
+                        type="submit"
+                      >
+                        Submit
+                      </button>
+                    </div>
                   </div>
                 </form>
               </div>
