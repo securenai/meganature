@@ -17,7 +17,7 @@ export default function ContactLayout({ children, frontMatter }) {
     }
 
     try {
-      const response = await fetch('/api/sendEmail', {
+      const response = await fetch('../api/sendEmail.js', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' },
