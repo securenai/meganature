@@ -5,9 +5,7 @@ import LatestNewsList from '@/components/LatestNewsList'
 const DEFAULT_LAYOUT = 'NewsLayout'
 
 export async function getStaticProps() {
-  // const newsDetails = await getFileBySlug('news', ['default'])
-  // return { props: { newsDetails } }
-  const newsDetails = await getFileBySlug('news', ['default'])
+  const newsDetails = await getFileBySlug('newsMenu', ['default'])
   const newsList = getAllNews()
 
   return { props: { newsDetails, newsList } }
