@@ -10,12 +10,13 @@ const siteMetadata = {
   siteLogo: '/static/images/logo2.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.jpg',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
+  email: 'info@meganature.com',
+  // github: 'https://github.com',
   twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
+  facebook: 'https://www.facebook.com/meganaturetech',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  instagram: 'https://instagram.com',
+  // linkedin: 'https://www.linkedin.com',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
