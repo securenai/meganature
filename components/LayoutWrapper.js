@@ -47,7 +47,7 @@ const LayoutWrapper = ({ children }) => {
 
   return (
     <SectionContainer>
-      <div className="flex flex-col justify-between h-screen">
+      <div className="flex h-screen flex-col justify-between">
         <header
           className="flex items-center justify-between py-10"
           style={{ flexDirection: headerFlexDirection }}
@@ -74,7 +74,7 @@ const LayoutWrapper = ({ children }) => {
               {headerNavLinks.map((link, index) => (
                 <div
                   key={link.title}
-                  className="relative inline-block group"
+                  className="group relative inline-block"
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={() => handleMouseLeave(index)}
                 >
@@ -86,14 +86,14 @@ const LayoutWrapper = ({ children }) => {
                   </Link>
                   {link.subNav && subNavVisible[index] && (
                     <div
-                      className="absolute left-0 z-10 mt-2 bg-white border border-gray-200 divide-y divide-gray-100 shadow-sm"
+                      className="absolute left-0 z-10 mt-2 divide-y divide-gray-100 border border-gray-200 bg-white shadow-sm"
                       style={{ minWidth: 'max-content', width: '100%' }}
                     >
                       {link.subNav.map((subLink) => (
                         <Link
                           key={subLink.title}
                           href={subLink.href}
-                          className="block px-4 py-2 mb-1 hover:bg-gray-200"
+                          className="mb-1 block px-4 py-2 hover:bg-gray-200"
                         >
                           {subLink.title}
                         </Link>
