@@ -1,5 +1,14 @@
 const headerNavLinks = [
-  { href: '/about', title: '關於恒自然' },
+  {
+    href: '/about',
+    title: '關於恒自然',
+    subNav: [
+      { title: '公司簡介', href: '/about/company-intro' },
+      { title: '品質認證', href: '/about/quality-assurance' },
+      { title: '生產設備', href: '/about/manufacture-equiptment' },
+      { title: '主要客戶', href: '/about/primary-customers' },
+    ],
+  },
   {
     href: '/products',
     title: '產品選項',
